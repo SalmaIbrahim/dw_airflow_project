@@ -59,7 +59,7 @@ def bronze_layer():
 
         except Exception as e:
             conn.rollback()
-            print(f"Error occurred while ingesting {file_name}: {e}")
+            raise Exception (f"Error occurred while ingesting {file_name}: {e}")
         
         finally:   
             cursor.close()
@@ -83,7 +83,7 @@ def bronze_layer():
             
         except Exception as e:
             conn.rollback()
-            print (f"Error occured while merging {src_type}: {e}")
+            raise Exception (f"Error occured while merging {src_type}: {e}")
 
         finally:
             cursor.close()
@@ -149,7 +149,7 @@ def bronze_layer():
                 print(f"File '{file_name}' downloaded successfully.")
             
             except Exception as e:
-                print(f"Failed to download file '{file_name}'.")
+                raise Exception (f"Failed to download file '{file_name}': {e}.")
             
 
                                 # ################################################### #
