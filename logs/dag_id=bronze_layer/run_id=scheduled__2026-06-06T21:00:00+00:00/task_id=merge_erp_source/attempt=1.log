@@ -1,0 +1,12 @@
+{"timestamp":"2026-06-10T14:57:42.096560Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-10T14:57:42.141589Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/bronze_layer.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-10T14:57:42.839995Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:42.840252Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:42.840410Z","level":"info","event":"Current task name:merge_erp_source","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:42.840563Z","level":"info","event":"Dag name:bronze_layer","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:43.078274Z","level":"info","event":"Starting merging Stage from erp tmp tables into bronze layer tables...","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:43.224762Z","level":"info","event":"Merging Stage from erp tmp tables into bronze layer tables completed successfully.","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:43.244862Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-06-10T14:57:43.345913Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:43.350235Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:43.350642Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): merge_erp_source>","logger":"task.stdout"}

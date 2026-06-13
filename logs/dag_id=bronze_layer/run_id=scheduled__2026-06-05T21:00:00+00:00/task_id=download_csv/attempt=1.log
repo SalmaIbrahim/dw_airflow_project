@@ -1,0 +1,16 @@
+{"timestamp":"2026-06-06T14:13:38.203597Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-06T14:13:38.220637Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/bronze_layer.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-06T14:13:38.714721Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:38.715107Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:38.715402Z","level":"info","event":"Current task name:download_csv","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:38.715646Z","level":"info","event":"Dag name:bronze_layer","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:39.543422Z","level":"info","event":"Downloading file: CUST_AZ12.csv...","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:39.556484Z","level":"info","event":"File 'CUST_AZ12.csv' downloaded successfully.","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:40.538603Z","level":"info","event":"Downloading file: LOC_A101.csv...","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:40.539001Z","level":"info","event":"File 'LOC_A101.csv' downloaded successfully.","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:41.215757Z","level":"info","event":"Downloading file: PX_CAT_G1V2.csv...","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:41.216926Z","level":"info","event":"File 'PX_CAT_G1V2.csv' downloaded successfully.","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:41.220293Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-06-06T14:13:41.397198Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:41.397638Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-06-06T14:13:41.397878Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): download_csv>","logger":"task.stdout"}

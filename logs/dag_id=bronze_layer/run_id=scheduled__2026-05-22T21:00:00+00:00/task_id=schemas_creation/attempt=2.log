@@ -1,0 +1,11 @@
+{"timestamp":"2026-05-23T14:46:44.435502Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-23T14:46:44.450310Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/bronze_layer.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-23T14:46:46.175962Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:46:46.177494Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:46:46.180903Z","level":"info","event":"Current task name:schemas_creation","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:46:46.181933Z","level":"info","event":"Dag name:bronze_layer","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:46:46.180667Z","level":"info","event":"Executing: CREATE SCHEMA IF NOT EXISTS bronze;\nCREATE SCHEMA IF NOT EXISTS silver;\nCREATE SCHEMA IF NOT EXISTS gold;","logger":"airflow.task.operators.airflow.providers.common.sql.operators.sql.SQLExecuteQueryOperator","filename":"sql.py","lineno":410}
+{"timestamp":"2026-05-23T14:46:46.821255Z","level":"info","event":"Running statement: CREATE SCHEMA IF NOT EXISTS bronze;\nCREATE SCHEMA IF NOT EXISTS silver;\nCREATE SCHEMA IF NOT EXISTS gold;, parameters: None","logger":"airflow.task.hooks.airflow.providers.postgres.hooks.postgres.PostgresHook","filename":"sql.py","lineno":861}
+{"timestamp":"2026-05-23T14:47:01.589673Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:01.591286Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:01.592059Z","level":"info","event":"Task operator:<Task(SQLExecuteQueryOperator): schemas_creation>","logger":"task.stdout"}

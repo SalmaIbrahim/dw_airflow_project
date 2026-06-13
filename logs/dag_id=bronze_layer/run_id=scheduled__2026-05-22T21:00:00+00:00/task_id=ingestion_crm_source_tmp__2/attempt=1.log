@@ -1,0 +1,12 @@
+{"timestamp":"2026-05-23T14:47:30.953605Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-05-23T14:47:30.967495Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/bronze_layer.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-05-23T14:47:32.743436Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:32.743818Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:32.744239Z","level":"info","event":"Current task name:ingestion_crm_source_tmp__2","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:32.744484Z","level":"info","event":"Dag name:bronze_layer","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:33.889979Z","level":"info","event":"Starting ingestion of prd_info.csv into bronze.crm_prd_info_tmp...","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:33.950358Z","level":"info","event":"Ingestion of prd_info.csv into bronze.crm_prd_info_tmp completed successfully.","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:33.943996Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-05-23T14:47:34.132904Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:34.133251Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-05-23T14:47:34.133472Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ingestion_crm_source_tmp__2>","logger":"task.stdout"}

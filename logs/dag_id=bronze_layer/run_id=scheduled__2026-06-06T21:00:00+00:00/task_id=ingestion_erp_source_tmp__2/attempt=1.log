@@ -1,0 +1,12 @@
+{"timestamp":"2026-06-10T14:57:31.843801Z","level":"info","event":"DAG bundles loaded: dags-folder, example_dags","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-10T14:57:31.894805Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/bronze_layer.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-10T14:57:34.022436Z","level":"info","event":"Task instance is in running state","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:34.022672Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.QUEUED","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:34.022803Z","level":"info","event":"Current task name:ingestion_erp_source_tmp__2","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:34.022927Z","level":"info","event":"Dag name:bronze_layer","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:34.819578Z","level":"info","event":"Starting ingestion of PX_CAT_G1V2.csv into bronze.erp_PX_CAT_G1V2_tmp...","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:34.990402Z","level":"info","event":"Ingestion of PX_CAT_G1V2.csv into bronze.erp_PX_CAT_G1V2_tmp completed successfully.","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:35.025815Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
+{"timestamp":"2026-06-10T14:57:35.381623Z","level":"info","event":"Task instance in success state","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:35.381915Z","level":"info","event":" Previous state of the Task instance: TaskInstanceState.RUNNING","logger":"task.stdout"}
+{"timestamp":"2026-06-10T14:57:35.382119Z","level":"info","event":"Task operator:<Task(_PythonDecoratedOperator): ingestion_erp_source_tmp__2>","logger":"task.stdout"}
