@@ -1,7 +1,6 @@
-```markdown
-# Data Warehouse Airflow Project (`dw_airflow_project`)
+# Data Warehouse Airflow Project
 
-An end-to-end Data Engineering pipeline designed to orchestrate data ingestion, transformation, and storage into a Data Warehouse using the **Medallion Architecture** (Bronze, Silver, and Gold layers).
+A pipeline designed to orchestrate data ingestion, transformation, and storage into a Data Warehouse using the **Medallion Architecture** (Bronze, Silver, and Gold layers).
 
 ---
 
@@ -9,9 +8,7 @@ An end-to-end Data Engineering pipeline designed to orchestrate data ingestion, 
 
 This project implements a multi-stage data ingestion and transformation workflow managed by **[Apache Airflow](https://airflow.apache.org/)**:
 
-
 ```
-
 Source Systems (CRM / ERP)
 │
 ▼
@@ -42,7 +39,7 @@ Source Systems (CRM / ERP)
 
 ## 📂 Project Structure
 
-```text
+```
 dw_airflow_project/
 ├── dags/
 │   ├── datasets/
