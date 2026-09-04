@@ -1,0 +1,38 @@
+salma@Salma-Ibrahim:~/docker-airflow$ docker compose exec airflow-apiserver airflow tasks test bronze_layer ingestion_crm_source
+2026-05-17T18:05:25.564568Z [info     ] setup plugin alembic.autogenerate.schemas [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:25.565012Z [info     ] setup plugin alembic.autogenerate.tables [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:25.565335Z [info     ] setup plugin alembic.autogenerate.types [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:25.565657Z [info     ] setup plugin alembic.autogenerate.constraints [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:25.565965Z [info     ] setup plugin alembic.autogenerate.defaults [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:25.566264Z [info     ] setup plugin alembic.autogenerate.comments [alembic.runtime.plugins] loc=plugins.py:37
+2026-05-17T18:05:27.000975Z [info     ] DAG bundles loaded: dags-folder, example_dags [airflow.dag_processing.bundles.manager.DagBundlesManager] loc=manager.py:209
+2026-05-17T18:05:27.025224Z [info     ] Filling up the DagBag from /opt/airflow/dags [airflow.dag_processing.dagbag.BundleDagBag] loc=dagbag.py:469
+2026-05-17T18:05:27.733004Z [info     ] Bulk-writing dags to db        [airflow.serialization.definitions.dag] count=2 loc=dag.py:197
+2026-05-17T18:05:27.803517Z [info     ] Getting latest run for non-partitioned Dag [airflow.dag_processing.collection] dag_id=bronze_layer loc=collection.py:194
+2026-05-17T18:05:27.826911Z [info     ] got latest run                 [airflow.dag_processing.collection] dag_id=bronze_layer loc=collection.py:197 logical_date='2026-05-15 21:00:00+00:00' partition_key=None
+2026-05-17T18:05:29.264863Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=DagRunInfo(run_after=DateTime(2026, 5, 15, 21, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 5, 15, 21, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 5, 15, 21, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None) loc=dag.py:420 next_info=DagRunInfo(run_after=DateTime(2026, 5, 19, 21, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 5, 19, 21, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 5, 19, 21, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None)
+2026-05-17T18:05:29.265516Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:792 next_dagrun='2026-05-19 21:00:00+00:00' next_dagrun_create_after='2026-05-19 21:00:00+00:00' next_dagrun_data_interval_end='2026-05-19 21:00:00+00:00' next_dagrun_data_interval_start='2026-05-19 21:00:00+00:00' next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-05-17T18:05:29.273299Z [info     ] Getting latest run for non-partitioned Dag [airflow.dag_processing.collection] dag_id=process_employees loc=collection.py:194
+2026-05-17T18:05:29.284938Z [info     ] no latest run found            [airflow.dag_processing.collection] dag_id=process_employees loc=collection.py:204
+2026-05-17T18:05:29.314053Z [info     ] get next_dagrun_info_v2        [airflow.serialization.definitions.dag] last_automated_run_info=None loc=dag.py:420 next_info=DagRunInfo(run_after=DateTime(2026, 5, 17, 0, 0, 0, tzinfo=Timezone('UTC')), data_interval=DataInterval(start=DateTime(2026, 5, 17, 0, 0, 0, tzinfo=Timezone('UTC')), end=DateTime(2026, 5, 17, 0, 0, 0, tzinfo=Timezone('UTC'))), partition_date=None, partition_key=None)
+2026-05-17T18:05:29.314583Z [info     ] setting next dagrun info       [airflow.models.dag] loc=dag.py:792 next_dagrun='2026-05-17 00:00:00+00:00' next_dagrun_create_after='2026-05-17 00:00:00+00:00' next_dagrun_data_interval_end='2026-05-17 00:00:00+00:00' next_dagrun_data_interval_start='2026-05-17 00:00:00+00:00' next_dagrun_partition_date=None next_dagrun_partition_key=None
+2026-05-17T18:05:31.940038Z [info     ] creating dag run               [airflow.serialization.definitions.dag] loc=dag.py:526 logical_date=None partition_key=None run_after=datetime.datetime(2026, 5, 17, 18, 5, 31, 929893, tzinfo=Timezone('UTC')) run_id=__airflow_temporary_run_2026-05-17T18:05:31.929906+00:00__
+2026-05-17T18:05:32.007180Z [info     ] Created dag run.               [airflow.models.dagrun] dagrun=<DagRun bronze_layer @ None: __airflow_temporary_run_2026-05-17T18:05:31.929906+00:00__, state:running, queued_at: None. run_type: manual> loc=dagrun.py:2217
+2026-05-17T18:05:32.057602Z [info     ] [DAG TEST] starting task_id=ingestion_crm_source map_index=-1 [airflow.sdk.definitions.dag] loc=dag.py:1435
+2026-05-17T18:05:32.059728Z [info     ] [DAG TEST] running task <TaskInstance: bronze_layer.ingestion_crm_source __airflow_temporary_run_2026-05-17T18:05:31.929906+00:00__ [None]> [airflow.sdk.definitions.dag] loc=dag.py:1438
+2026-05-17T18:05:41.524591Z [info     ] Task started                   [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=019e371d-6486-7c9b-ad81-7730d04a0e6c hostname=a8ec33364a29 loc=task_instances.py:208 previous_state=queued ti_id=019e371d-5de2-7b33-a22a-12474ea97260
+2026-05-17T18:05:41.535907Z [info     ] Task instance state updated    [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=019e371d-6486-7c9b-ad81-7730d04a0e6c loc=task_instances.py:234 rows_affected=1 ti_id=019e371d-5de2-7b33-a22a-12474ea97260
+2026-05-17T18:05:41.620772Z [info     ] Updating RenderedTaskInstanceFields [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=019e371d-8364-7118-adb9-2422d69b745e field_count=3 loc=task_instances.py:811 ti_id=019e371d-5de2-7b33-a22a-12474ea97260
+Task instance is in running state
+ Previous state of the Task instance: TaskInstanceState.QUEUED
+Current task name:ingestion_crm_source
+Dag name:bronze_layer
+Starting ingestion of cust_info.csv into bronze.crm_cust_info...
+2026-05-17T18:05:41.916659Z [info     ] Done. Returned value was: None [airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator] loc=python.py:229
+[] []
+2026-05-17T18:05:41.984799Z [info     ] Task instance state updated    [airflow.api_fastapi.execution_api.routes.task_instances] correlation_id=019e371d-849e-7c44-b697-b3d450a0075b loc=task_instances.py:415 new_state=success rows_affected=1 ti_id=019e371d-5de2-7b33-a22a-12474ea97260
+Task instance in success state
+ Previous state of the Task instance: TaskInstanceState.RUNNING
+Task operator:<Task(_PythonDecoratedOperator): ingestion_crm_source>
+2026-05-17T18:05:42.033005Z [info     ] [DAG TEST] end task task_id=ingestion_crm_source map_index=-1 [airflow.sdk.definitions.dag] loc=dag.py:1497
+2026-05-17T18:05:42.093959Z [warning  ] Multiple rows returned with uselist=False for lazily-loaded attribute 'DagRun.serialized_dag'  [py.warnings] category=SAWarning filename=/home/airflow/.local/lib/python3.13/site-packages/airflow/utils/session.py lineno=43
