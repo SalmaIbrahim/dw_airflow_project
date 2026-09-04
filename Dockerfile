@@ -1,4 +1,4 @@
-FROM apache/airflow:2.9.0
+FROM apache/airflow:3.2.1
 
 USER airflow
 RUN pip install apache-airflow-providers-postgres
