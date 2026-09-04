@@ -30,6 +30,8 @@ Source Systems (CRM / ERP)
 
 ## 🛠️ Tech Stack & Tools
 
+* **Ubuntu:** [WSL]()
+* **Containerization:** [Docker](https://www.docker.com/products/docker-desktop/) (docker compose)
 * **Orchestration:** [Apache Airflow](https://airflow.apache.org/) (Taskflow API, Hooks, & SQL Operators)
 * **Database:** PostgreSQL
 * **Languages & Libraries:** Python (`pendulum`, `requests`, `psycopg2`), SQL, Shell
@@ -41,23 +43,29 @@ Source Systems (CRM / ERP)
 
 ```
 dw_airflow_project/
+├── config/                            # airflow config file
 ├── dags/
 │   ├── datasets/
 │   │   ├── links/
 │   │   │   └── get_erp_datasets.txt   # Target URLs for ERP datasets
-│   │   ├── source_crm/               # Local CSV files for CRM ingestion
-│   │   └── source_erp/               # Downloaded ERP CSV files
+│   │   ├── source_crm/                # Local CSV files for CRM ingestion
+│   │   └── source_erp/                # Downloaded ERP CSV files
 │   ├── sql/
 │   │   ├── 1_db_init/
-│   │   │   └── create_schemas.sql    # Data Warehouse schema initializations
+│   │   │   └── create_schemas.sql     # Data Warehouse schema initializations
 │   │   └── 2_bronze/
-│   │       ├── ddl_bronze.sql        # DDL for Bronze layer target tables
-│   │       ├── ddl_tmp_bronze.sql    # DDL for temporary staging tables
-│   │       ├── merge_crm.sql         # SQL query to merge CRM temp data
-│   │       └── merge_erp.sql         # SQL query to merge ERP temp data
-│   └── bronze_layer.py               # Main Bronze Layer DAG definition
-├── README.md
-└── requirements.txt
+│   │       ├── ddl_bronze.sql         # DDL for Bronze layer target tables
+│   │       ├── ddl_tmp_bronze.sql     # DDL for temporary staging tables
+│   │       ├── merge_crm.sql          # SQL query to merge CRM temp data
+│   │       └── merge_erp.sql          # SQL query to merge ERP temp data
+│   │
+│   └── bronze_layer.py                # Main Bronze Layer DAG definition
+├── docs/                              # pic for the running DAG & data from staging tables
+├── .env
+├── .getignore
+├── Dockerfile
+├── docker-compose.yaml
+└── README.md
 
 ```
 
@@ -93,7 +101,7 @@ The main workflow in `dags/bronze_layer.py` executes the following sequence:
 * Place CRM CSV files in `dags/datasets/source_crm/`.
 * Add valid dataset download URLs to `dags/datasets/links/get_erp_datasets.txt`.
 
-
+![Bronze_layer_dag](docs/screenshot/bronze%20layer/Bronze_layer_dag.png)
 
 ### Running the DAG
 
