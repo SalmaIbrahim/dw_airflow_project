@@ -61,6 +61,7 @@ dw_airflow_project/
 │   │
 │   └── bronze_layer.py                # Main Bronze Layer DAG definition
 ├── docs/                              # pic for the running DAG & data from staging tables
+├── logs/                              # for DAGs logs
 ├── .env
 ├── .getignore
 ├── Dockerfile
@@ -105,9 +106,16 @@ The main workflow in `dags/bronze_layer.py` executes the following sequence:
 
 ### Running the DAG
 
+```bash
+docker compose build
+docker compose up -d
+```
+
 Trigger the `bronze_layer` DAG from the Apache Airflow UI or via CLI:
 
 ```bash
 docker compose exec airflow-worker airflow dags trigger bronze_layer
 
 ```
+
+
